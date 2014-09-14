@@ -1,0 +1,130 @@
+package org.huadev.util;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+
+public class ContentTypeXML {
+
+	String[] postfixs = {
+			
+			 "application/x-cdlink" ,".vcd",
+			  "application/x-ipix" ,".ipx",
+			  "text/css" ,".css",
+			  "application/x-tcl" ,".tcl",
+			  "audio/x-wav" ,".wav",
+			  "x-conference/x-cooltalk" ,".ice",
+			  "application/x-troff-ms" ,".ms",
+			  "application/solids" ,".sol",
+			  "application/x-hdf" ,".hdf",
+			  "application/vda" ,".vda",
+			  "application/x-ipscript" ,".ips",
+			  "application/x-gtar" ,".gtar",
+			  "application/x-ustar" ,".ustar",
+			  "image/x-xpixmap" ,".xpm",
+			  "image/cmu-raster" ,".ras",
+			  "audio/TSP-audio" ,".tsi",
+			  "application/x-javascript" ,".js",
+			  "text/javascript" ,".js",
+			  "application/zip" ,".zip",
+			  "application/x-troff-me" ,".me",
+			  "application/x-tex" ,".tex",
+			  "image/x-rgb" ,".rgb",
+			  "application/x-troff-man" ,".man",
+			  "image/x-portable-graymap" ,".pgm",
+			  "application/msword" ,".doc",
+			  "application/x-lisp" ,".lsp",
+			  "text/richtext" ,".rtx",
+			  "image/x-xwindowdump" ,".xwd",
+			  "video/x-fli" ,".fli",
+			  "application/andrew-inset" ,".ez",
+			  "text/xml" ,".xml",
+			  "application/x-gzip" ,".gz",
+			  "application/x-sv4cpio" ,".sv4cpio",
+			  "application/x-cpio" ,".cpio",
+			  "application/pro_eng" ,".prt",
+			  "video/x-sgi-movie" ,".movie",
+			  "application/x-chess-pgn" ,".pgn",
+			  "audio/x-realaudio" ,".ra",
+			  "application/x-freelance" ,".pre",
+			  "application/oda" ,".oda",
+			  "application/mac-binhex40" ,".hqx",
+			  "application/mac-compactpro" ,".cpt",
+			  "application/x-tar" ,".tar",
+			  "application/SLA" ,".stl",
+			  "image/x-xbitmap" ,".xbm",
+			  "application/x-shockwave-flash" ,".swf",
+			  "application/dxf" ,".dxf",
+			  "application/x-latex" ,".latex",
+			  "application/clariscad" ,".ccad",
+			  "text/tab-separated-values" ,".tsv",
+			  "application/acad" ,".dwg",
+			  "application/vnd.mif" ,".mif",
+			  "application/pdf" ,".pdf",
+			  "application/x-bcpio" ,".bcpio",
+			  "application/x-wais-source" ,".src",
+			  "application/x-futuresplash" ,".spl",
+			  "audio/x-pn-realaudio-plugin" ,".rpm",
+			  "image/x-portable-pixmap" ,".ppm",
+			  "application/set" ,".set",
+			  "image/ief" ,".ief",
+			  "application/x-lotusscreencam" ,".scm",
+			  "video/x-msvideo" ,".avi",
+			  "image/x-portable-anymap" ,".pnm",
+			  "application/x-sv4crc" ,".sv4crc",
+			  "application/drafting" ,".drw",
+			  "application/i-deas" ,".unv",
+			  "image/x-portable-bitmap" ,".pbm",
+			  "image/gif" ,".gif",
+			  "www/mime" ,".mime",
+			  "text/rtf" ,".rtf",
+			  "application/dsptype" ,".tsp",
+			  "application/x-sh" ,".sh",
+			  "image/png" ,".png",
+			  "application/x-csh" ,".csh",
+			  "application/x-stuffit" ,".sit",
+			  "text/x-setext" ,".etx",
+			  "application/x-shar" ,".shar",
+			  "application/x-dvi" ,".dvi",
+			  "chemical/x-pdb" ,".pdb|.xyz",
+			  "video/quicktime" ,".mov|.qt",
+			  "video/vnd.vivo" ,".viv|.vivo",
+			  "text/html" ,".htm|.html",
+			  "image/tiff" ,".tif|.tiff",
+			  "audio/basic" ,".au|.snd",
+			  "application/x-texinfo" ,".texi|.texinfo",
+			  "application/x-netcdf" ,".cdf|.nc",
+			  "audio/x-pn-realaudio" ,".rm|.ram|rmvb",
+			  "application/smil" ,".smi|.smil",
+			  "application/STEP" ,".step|.stp",
+			  "text/sgml" ,".sgm|.sgml",
+			  "model/vrml" ,".vrml|.wrl",
+			  "model/iges" ,".iges|.igs",
+			  "model/mesh" ,".mesh|.msh|.silo",
+			  "application/postscript" ,".ai|.eps|.ps",
+			  "audio/mpeg" ,".mp3|.mp2|.mpga",
+			  "application/x-director" ,".dcr|.dir|.dxr",
+			  "video/mpeg" ,".mpeg|.mpe|.mpg",
+			  "audio/midi" ,".mid|.kar|.midi",
+			  "image/jpeg" ,".jpg|.jpeg|.jpe",
+			  "audio/x-aiff" ,".aif|.aifc|.aiff",
+			  "application/x-troff" ,".roff|.t|.tr",
+			  "application/x-koan" ,".skd|.skm|.skp|.skt",
+			  "application/vnd.ms-excel" ,".xls|.xlc|.xll|.xlm|.xlw",
+			  "application/mspowerpoint" ,".ppt|.pot|.pps|.ppz",
+			  "application/octet-stream" ,".rar|.exe|.bin|.class|.dms|.lha|.lzh",
+			  "text/plain" ,".txt|.c|.cc|.asc|.f|.f90|.h|.hh|.m"};
+			 
+			 
+				public Map<String,String> getPostfixMap() {
+					Map<String,String> postfixMap = new HashMap();
+					for(int i = 0 ; i < postfixs.length; i++){
+						postfixMap.put(postfixs[i], postfixs[++i]);
+					}
+					return postfixMap;
+				}
+
+
+
+}
