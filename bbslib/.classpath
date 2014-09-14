@@ -9,12 +9,5 @@
 	<classpathentry kind="lib" path="lib/httpclient/httpcore-4.3.2.jar"/>
 	<classpathentry kind="lib" path="lib/httpclient/httpmime-4.3.3.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/HomePrice/LibProducer/lib/httpclient/commons-codec-1.6.jar"/>
-	<classpathentry kind="lib" path="D:/HomePrice/LibProducer/lib/httpclient/commons-logging-1.1.3.jar"/>
-	<classpathentry kind="lib" path="D:/HomePrice/LibProducer/lib/httpclient/fluent-hc-4.3.3.jar"/>
-	<classpathentry kind="lib" path="D:/HomePrice/LibProducer/lib/httpclient/httpclient-4.3.3.jar"/>
-	<classpathentry kind="lib" path="D:/HomePrice/LibProducer/lib/httpclient/httpclient-cache-4.3.3.jar"/>
-	<classpathentry kind="lib" path="D:/HomePrice/LibProducer/lib/httpclient/httpcore-4.3.2.jar"/>
-	<classpathentry kind="lib" path="D:/HomePrice/LibProducer/lib/httpclient/httpmime-4.3.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
